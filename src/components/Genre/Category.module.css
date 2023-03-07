@@ -1,0 +1,14 @@
+.body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.right{
+    width: 30vw;
+    height: 80vh;
+    padding-top: 10vh;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3,1fr);
+}

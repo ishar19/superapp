@@ -1,0 +1,41 @@
+
+
+img{
+    width: 50vw;
+    height: 100vh;
+    
+}
+
+.top{
+    position: absolute;
+    display: flex;
+    top: 4vh;
+    left: 2vw;
+    gap: 40px;
+    color: white;
+    align-items: center;
+}
+
+.top p{
+    font-size: larger;
+    font-weight: 600;
+}
+
+.top button{
+    padding: 12px 32px;
+    background: #72DB73;
+    border-radius: 33px;
+    color: white;
+    box-shadow: none;
+    border: none;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 3vh;
+    left: 2vw;
+    color: white;
+    font-size:55px;
+    font-weight: 900;
+    max-width: 50vw;
+}
