@@ -8,6 +8,8 @@ import music from '../../assets/music.png'
 import romance from '../../assets/romance.png'
 import thriller from '../../assets/thriller.png'
 import western from '../../assets/western.png'
+import Chips from '../Global/Chips'
+import { useState, useEffect } from 'react'
 
 const genres = [
     {
@@ -53,21 +55,51 @@ const genres = [
     }
 ]
 const Category = ()=>{
+    const [categories, setCategories] = useState([])
+    const handleSignUp = ()=>{
+        window.localStorage.setItem("genres", JSON.stringify([...categories]))
+    }
     return (
         <div className={styles.body}>
-            <div></div>
-            <div className={styles.right}>
-                {genres.map((data,idx)=>{
-                    return (
-                        <div key={idx} style={{background:data['color'],color:"white",padding:"16px",borderRadius:"12px"}}>
-                            <p style={{marginBottom:"4px",fontSize:"18px"}}>{data.id}</p>
-                            {data.image}
-                        </div>
-                    )
-                })}
+            <div className={styles.left}>
+                <p className={styles.heading}>Super app</p>
+                <p className={styles.subHeading}>Choose your entertainment category</p>
+                <div style={{marginTop:"10vh"}}>
+                <Chips categories={categories} color={"green"}  setCategories={setCategories}/>
+                </div>
             </div>
+            <div className={styles.right}>
+                {genres.map((data,idx)=>
+                    <Block data={data} idx={idx} categories={categories}  setCategories={setCategories}/>
+                )}
+            </div>
+            <button className={styles.signUp} onClick={handleSignUp}>Next Page</button>
         </div>
     )
 }
 
+
+const Block = ({data,idx, setCategories, categories})=>{
+    const [selected, setSelected] = useState()
+    const handleClick = (e)=>{
+        if(categories.includes(data.id)){
+            const index = categories.indexOf(data.id)
+            categories.splice(index,1)
+            setCategories([...categories])
+        }
+        else{
+            setCategories([...categories,data.id])
+        }
+        setSelected(!selected)
+    }
+    useEffect(()=>{
+        setSelected(categories.includes(data.id)==true)
+    })
+    return (
+        <div data={data}  onClick={(e)=>handleClick(e)}  key={idx} style={{background:data['color'],color:"white",padding:"16px",borderRadius:"12px",border:`${selected?"4px solid green":"4px solid white"}`}}>
+            <p style={{marginBottom:"4px",fontSize:"18px"}}>{data.id}</p>
+            {data.image}
+        </div>
+    )
+}
 export default Category
