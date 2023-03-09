@@ -10,7 +10,7 @@ import thriller from '../../assets/thriller.png'
 import western from '../../assets/western.png'
 import Chips from '../Global/Chips'
 import { useState, useEffect } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 const genres = [
     {
         id:"Action",
@@ -56,8 +56,10 @@ const genres = [
 ]
 const Category = ()=>{
     const [categories, setCategories] = useState([])
+    const navigate = useNavigate()
     const handleSignUp = ()=>{
         window.localStorage.setItem("genres", JSON.stringify([...categories]))
+        navigate("/browse")
     }
     return (
         <div className={styles.body}>

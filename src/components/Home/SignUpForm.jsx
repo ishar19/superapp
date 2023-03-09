@@ -13,11 +13,13 @@ const SignUpForm = ()=>{
         let valid = true
         if(Object.keys(formValues).length<5){
             valid = false
+            alert("Please fill in the form accurately")
             return
         }
         Object.values(formValues).map((data)=>{
             if(data.length==0){
                 valid = false
+                alert("Please fill in the form accurately")
                 return
             }
         })
