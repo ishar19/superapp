@@ -10,4 +10,4 @@
   npm run dev
 ```
 
-This project is made using [Vite](https://www.vite.org)
+This project is made using [Vite](https://www.vitejs.dev)
