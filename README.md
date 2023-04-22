@@ -9,3 +9,5 @@
 ```Bash
   npm run dev
 ```
+
+This project is made using [Vite](vite.org)
