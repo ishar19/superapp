@@ -1,5 +1,7 @@
 # superapp
 
+Superapp project for cuvette react capstone 
+
 ## Install dependencies 
 ``` Bash 
   npm install
