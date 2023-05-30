@@ -45,3 +45,8 @@
     border: none;
     padding: 12px;
 }
+
+ .error{
+    color: red;
+    font-size: 12px;
+}

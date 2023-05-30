@@ -56,10 +56,17 @@ const genres = [
 ]
 const Category = ()=>{
     const [categories, setCategories] = useState([])
+    const [lengthError, setLengthError] = useState(false)
     const navigate = useNavigate()
     const handleSignUp = ()=>{
-        window.localStorage.setItem("genres", JSON.stringify([...categories]))
-        navigate("/browse")
+        if(categories.length<3){
+            setLengthError(true)
+            return
+        }else{
+            setLengthError(false)
+            window.localStorage.setItem("genres", JSON.stringify([...categories]))
+            navigate("/browse")
+        }
     }
     return (
         <div className={styles.body}>
@@ -68,6 +75,7 @@ const Category = ()=>{
                 <p className={styles.subHeading}>Choose your entertainment category</p>
                 <div style={{marginTop:"10vh"}}>
                 <Chips categories={categories} color={"green"}  setCategories={setCategories}/>
+                {lengthError?<p className={styles.error}>Please choose at least 3</p>:<></>}
                 </div>
             </div>
             <div className={styles.right}>

@@ -2,7 +2,7 @@
     background:  #1E1E1E;
     color: white;
     width: 50vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 6vw;
     box-sizing: border-box;
     text-align: center;
@@ -52,6 +52,11 @@ form button{
     color: white;
     background-color:  #72DB73;
     border: none;
+}
+
+form .error{
+    color: red;
+    font-size: 12px;
 }
 
 .footer p{
