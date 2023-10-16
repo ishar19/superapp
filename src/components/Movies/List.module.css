@@ -1,6 +1,11 @@
-.heading{
-    color: white;
-    font-size: 2rem;
-    margin-left: 2vw;
-    color: #878787;
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+.heading {
+  color: white;
+  font-size: 2rem;
+  margin-left: 2vw;
+  color: #878787;
+}
+
+.header {
+  font-family: "Single Day", cursive;
 }
