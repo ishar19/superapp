@@ -1,69 +1,179 @@
-.body{
-    background:  #1E1E1E;
-    color: white;
-    width: 50vw;
-    min-height: 100vh;
-    padding: 6vw;
-    box-sizing: border-box;
-    text-align: center;
+/* .body {
+  background: #1e1e1e;
+  color: white;
+  width: 50vw;
+  min-height: 100vh;
+  padding: 6vw;
+  box-sizing: border-box;
+  text-align: center;
+  overflow-y: hidden;
 }
-.body p{
-    font-size: 1.5rem;
-    margin-top: 12px;
-}
-
-.body .super{
-    color:  #72DB73;
-    font-size: 3rem;
-    margin-bottom: 15px;
+.body p {
+  font-size: 1.5rem;
+  margin-top: 12px;
 }
 
-form input{
-    display: block;
-    margin: 16px auto;
-    padding: 12px;
-    width: 70%;
-    background-color:#292929;
-    border: none;
-    border-radius: 6px;
-    color: white;
+.body .super {
+  color: #72db73;
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 
-form label{
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 12px;
+form input {
+  display: block;
+  margin: auto 16px;
+  padding: 12px;
+  width: 70%;
+  background-color: #292929;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+form {
+  text-align: left;
 }
 
-form label input{
-    margin: 0px;
-    padding: 0px;
-    width: 24px;
+form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 12px;
 }
 
-form button{
-    box-shadow: none;
-    width: 70%;
-    margin-top: 16px;
-    border-radius: 24px;
-    padding:10px 12px;
-    color: white;
-    background-color:  #72DB73;
-    border: none;
+form label input {
+  margin: 0px;
+  padding: 0px;
+  width: 24px;
 }
 
-form .error{
-    color: red;
-    font-size: 12px;
+form button {
+  box-shadow: none;
+  width: 70%;
+  margin-top: 16px;
+  border-radius: 24px;
+  padding: 10px 12px;
+  color: white;
+  background-color: #72db73;
+  border: none;
 }
 
-.footer p{
-    font-size: 14px;
-    color: #7C7C7C;
-    width: 70%;
-    margin: 12px auto;
-    text-align: left;
-    line-height: 1.2rem;
+form .error {
+  color: red;
+  font-size: 12px;
+  padding-left: ;
+  text-align: left;
+}
+
+ */
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.body {
+  background: #1e1e1e;
+  color: white;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4vw;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.body .super {
+  color: #72db73;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.super {
+  font-family: "Single Day", cursive;
+}
+form input {
+  margin: 12px auto;
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  background-color: #292929;
+  border: 2px solid red;
+  border-radius: 6px;
+  color: white;
+  outline: none;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border-color: #72db73;
+}
+
+form .error {
+  color: red;
+  font-size: 14px;
+  width: 90%;
+  max-width: 400px;
+  margin: -10px auto 8px;
+  text-align: left;
+  margin-top: 2px;
+}
+
+form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 10px;
+  width: 90%;
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: left;
+}
+
+form label input[type="checkbox"] {
+  margin: 0;
+  width: 24px;
+  height: 24px;
+}
+
+form button {
+  width: 90%;
+  max-width: 400px;
+  margin: 24px auto;
+  border-radius: 24px;
+  padding: 10px 12px;
+  color: white;
+  background-color: #72db73;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #5cb85c;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #7c7c7c;
+  width: 90%;
+  max-width: 400px;
+  margin: 8px auto;
+  text-align: left;
+  line-height: 1.2rem;
+}
+
+.footer span {
+  color: #72db73;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .body {
+    padding: 2vw;
+  }
 }
